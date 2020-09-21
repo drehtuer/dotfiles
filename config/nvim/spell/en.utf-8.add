@@ -1,0 +1,12 @@
+#elp
+SRAM
+#M FBL
+BM
+FBL
+AUTOSAR
+#ootloader
+MCAL
+Bootloader
+downloadable
+updatable
+Configurator

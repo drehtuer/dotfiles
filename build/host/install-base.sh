@@ -1,0 +1,42 @@
+#!/bin/sh
+sudo apt-get install -y --no-install-recommends \
+    aptitude \
+    ascii \
+	asciidoctor \
+    autoconf \
+    automake \
+    build-essential \
+    ca-certificates \
+    cloc \
+    cmake \
+    cppcheck \
+    curl \
+    doxygen \
+    expect \
+    exuberant-ctags \
+    gdb \
+    git \
+    git-lfs \
+    gnupg2 \
+    parted \
+    htop \
+    libssl-dev \
+    libtool \
+    libtool-bin \
+    ninja-build \
+    pass \
+    plantuml \
+    python3-dev \
+    python3-pip \
+    python3-setuptools \
+    python3-wheel \
+    ranger \
+    screen \
+    tmux \
+    vim \
+    xclip \
+    xsel \
+	xxd \
+    zlib1g-dev \
+    zsh \
+

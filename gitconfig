@@ -1,0 +1,22 @@
+[user]
+	email = drehtuer@drehtuer.de
+	name = Karsten Brand
+	signingkey = 0D6863CA214FDAC9
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[color]
+	ui = auto
+[push]
+	default = simple
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
+	ps = push
+	pl = pull
+[gpg]
+	program = gpg2

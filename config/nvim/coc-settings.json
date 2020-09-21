@@ -1,0 +1,9 @@
+{
+  "clangd.path": "clangd-10",
+  "markdownlint.config": {
+    "line_length": false,
+    "heading_line_length": false,
+    "MD012": false,
+    "MD041": false
+  }
+}
