@@ -1,0 +1,24 @@
+general {
+  output_format = "i3bar"
+  colors = false
+  interval = 1
+}
+
+order += "read_file TRAFFIC"
+order += "read_file KBD"
+order += "time"
+
+read_file TRAFFIC {
+  path = "/tmp/i3_traffic"
+  format = "%content"
+}
+
+read_file KBD {
+  path = "/tmp/i3_kbd"
+  format = "%content"
+}
+
+time {
+  format = "%a, %d.%m.%Y %H:%M (CW %V)"
+}
+

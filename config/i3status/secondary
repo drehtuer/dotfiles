@@ -1,0 +1,41 @@
+general {
+  output_format = "i3bar"
+  colors = true
+  interval = 2
+}
+
+order += "ipv6"
+order += "ethernet enx000ec6746070"
+order += "load"
+order += "memory"
+order += "volume master"
+order += "time"
+
+ipv6 {
+  format_up = "IPv6: %ip"
+  format_down = "No IPv6"
+}
+
+ethernet enx000ec6746070 {
+  format_up = "Eth: %ip (%speed)"
+  format_down = "Eth: down"
+}
+
+load {
+  format = "Load: %1min %5min %15min"
+}
+
+memory {
+  format = "RAM: %percentage_free free"
+}
+
+volume master {
+  format = "Vol: %volume"
+  format_muted = "Vol: Muted"
+  device = "pulse"
+}
+
+time {
+  format = "%a, %d.%m.%Y %H:%M (CW %V)"
+}
+
