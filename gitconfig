@@ -1,7 +1,7 @@
 [user]
 	email = drehtuer@drehtuer.de
 	name = Karsten Brand
-	signingkey = 0D6863CA214FDAC9
+	signingkey = 7351AE361A5EDE37
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -20,3 +20,5 @@
 	pl = pull
 [gpg]
 	program = gpg2
+[commit]
+	gpgsign = true
