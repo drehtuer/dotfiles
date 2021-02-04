@@ -1,0 +1,33 @@
+export EDITOR=nvim
+
+
+function preexec()
+{
+}
+
+function precmd()
+{
+  date=$(date +"%%F{cyan}%H:%M:%S, %a, %d %b %Y, CW %W%%f")
+  export RPROMPT="$date"
+}
+
+function git_branch()
+{
+  branch=
+  if [ ! -z $vcs_info_msg_0_ ]; then
+    branch=[$vcs_info_msg_0_]
+  fi
+  echo $branch
+}
+
+precmd_vcs_info()
+{
+  vcs_info
+}
+
+precmd_functions+=( precmd_vcs_info )
+
+PS1='
+%B%F{green}%n@%M%f:%F{yellow}%/%f%b %F{magenta}$(git_branch)%f
+%F{yello}[%?]%f %B%F{magenta}%_>%f%b '
+PS2='%B%F{magenta}>%f%b '

@@ -1,0 +1,6 @@
+typeset -U PATH path
+path=("$HOME/.local/bin" "/opt/wine-devel/bin" "$path[@]")
+export PATH
+
+typeset WINEPREFIX="$HOME/.wine"
+export WINEPREFIX

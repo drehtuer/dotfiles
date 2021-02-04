@@ -23,9 +23,9 @@ popup_during_fullscreen smart
 workspace_auto_back_and_forth yes
 
 # Window borders
-default_border normal
+default_border none
 default_floating_border normal
-#hide_edge_borders both
+hide_edge_borders none
 
 # Mouse focus
 focus_follows_mouse yes
@@ -60,11 +60,11 @@ bindsym $mod+Shift+q kill
 
 # Reboot
 bindsym $mod+Shift+Home exec \
-  "i3-nagbar -t warning -m 'Reboot?' -B 'Yes' 'reboot'"
+  "i3-nagbar -t warning -m 'Reboot?' -B 'Yes, reboot' 'reboot'"
 
 # Shutdown
 bindsym $mod+Shift+End exec \
-  "i3-nagbar -t warning -m 'Shutdown?' -B 'Yes' 'shutdown -h now'"
+  "i3-nagbar -t warning -m 'Shutdown?' -B 'Yes, shutdown' 'shutdown -h now'"
 
 # start dmenu (program launcher)
 bindsym $mod+Shift+d exec dmenu_run
@@ -125,21 +125,31 @@ bindsym $mod+Shift+Next scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
+set $ws1 "1: Primary"
+set $ws2 "2: Background"
+set $ws3 "3: Secondary"
+set $ws4 "4: Background"
+set $ws5 "5: Mail/RSS"
+set $ws6 "6: Audio"
+set $ws7 "7: IM"
+set $ws8 "8: Games"
 set $ws9 9
 set $ws10 10
 
+exec i3-msg "workspace \"5: Mail/RSS\"; append_layout ~/.config/i3/ws5.json"
+exec i3-msg "workspace \"6: Audio\"; append_layout ~/.config/i3/ws6.json"
+exec i3-msg "workspace \"7: IM\"; append_layout ~/.config/i3/ws7.json"
+exec i3-msg "workspace \"8: Games\"; append_layout ~/.config/i3/ws8.json"
+
+workspace $ws1 output $monitor_primary
+workspace $ws2 output $monitor_primary
+workspace $ws3 output $monitor_secondary
 workspace $ws4 output $monitor_secondary
 workspace $ws5 output $monitor_secondary
 workspace $ws6 output $monitor_secondary
 workspace $ws7 output $monitor_secondary
+workspace $ws8 output $monitor_secondary
+workspace $ws9 output $monitor_secondary
 workspace $ws10 output $monitor_secondary
 
 # switch to workspace
@@ -220,7 +230,7 @@ bar {
 # Startup
 exec --no-startup-id xrandr --display DP-4.8 --primary
 exec --no-startup-id xrandr --output DP-4.8 --left-of DP-2
-exec --no-startup-id picom -b
+exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id xsettingsd
 exec --no-startup-id ~/.config/i3/switchKeyboard.sh /tmp/i3_kbd restore &
 exec --no-startup-id ~/.config/i3/traffic.sh enx000ec6746070 1 /tmp/i3_traffic &
@@ -230,7 +240,7 @@ exec nitrogen --restore
 exec nm-applet
 exec blueman-applet
 exec parcellite
-exec trojita
+exec thunderbird
 exec feedreader
 exec whatsdesk
 exec signal-desktop
@@ -241,13 +251,14 @@ exec owncloud
 
 # Window matchers
 #for_window [class="."] title_format "<b>%title</b> [%class::%instance]"
-for_window [class="."] border pixel 2
-for_window [class=Pavucontrol] floating enable
-for_window [class=Gnome-calculator] floating enable
-for_window [class=Steam] floating enable
-for_window [class="VirtualBox Manager"] floating enable
-assign [class=trojita] $ws4
-assign [class=Feedreader] $ws4
-assign [class=Deadbeef] $ws5
-assign [class=whatsdesk|signal|Signal|discord] $ws6
-assign [class=Steam] $ws7
+#for_window [class="."] border pixel 0
+for_window [class=^Pavucontrol$] floating enable
+for_window [class=^Gnome-calculator$] floating enable
+assign [class=^Thunderbird$] $ws5
+assign [class=^Feedreader$] $ws5
+assign [class=^Deadbeef$] $ws6
+assign [class=^whatsdesk$|^Signal$|^discord$] $ws7
+assign [class=^Steam$|title=^Steam$] $ws8
+
+exec i3-msg "workspace \"1:Primary\""
+exec i3-msg "workspace \"3:Secondary\""
