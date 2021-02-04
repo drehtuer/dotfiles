@@ -1,0 +1,11 @@
+configuration {
+  modi: "drun,run,ssh,window,keys";
+  theme: "solarized";
+  font: "Source Code Pro 11";
+  lines: 12;
+  padding: 18;
+  width: 60;
+  columns: 3;
+  show-icons: true;
+  sidebar-mode: true;
+}
