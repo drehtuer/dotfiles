@@ -1,0 +1,9 @@
+autodetach on
+defbce on
+defmousetrack on
+defmousetrack on
+defscrollback 1000
+defshell /bin/zsh
+defutf8 on
+logtstamp on
+startup_message off

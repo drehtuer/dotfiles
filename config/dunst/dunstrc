@@ -1,0 +1,29 @@
+[global]
+  allow_markup = yes
+  browser = google-chrome
+  corner_radius = 0
+  dmenu = rofi - show drun
+  font = "Source Code Pro 9"
+  format = "%s %b"
+  geometry = "300x5-20+20"
+  icon_position = left
+  markup = full
+  max_icon_size = 32
+  monitor = 0
+  mouse_left = close_current
+  mouse_middle = do_action
+  mouse_right = close_all
+  padding = 10
+  separator_height = 2
+  sort = true
+  word_wrap = yes
+
+[frame]
+  width = 0
+  color = "#356577"
+  foreground = "#c9c9c9"
+  background = "#09315b"
+  timeout = 5
+
+[urgency_critical]
+  timeout = 0

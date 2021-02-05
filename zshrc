@@ -1,7 +1,7 @@
 autoload -Uz compinit promptinit
 autoload -Uz vcs_info
 
-compinit
+compinit -d ~/.cache/zcompdump
 promptinit
 
 zstyle ':completion:*' menu select
