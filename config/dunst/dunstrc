@@ -5,7 +5,9 @@
   dmenu = rofi - show drun
   font = "Source Code Pro 9"
   format = "%s %b"
+  frame_width = 2
   geometry = "300x5-20+20"
+  horizontal_padding = 10
   icon_position = left
   markup = full
   max_icon_size = 32
@@ -14,16 +16,26 @@
   mouse_middle = do_action
   mouse_right = close_all
   padding = 10
+  separator_color = auto
   separator_height = 2
+  transparency = 25
   sort = true
   word_wrap = yes
 
-[frame]
-  width = 0
-  color = "#356577"
-  foreground = "#c9c9c9"
-  background = "#09315b"
+[urgency_low]
+  foreground = "#DDDDDD"
+  background = "#404552"
+  frame_color = "000000"
+  timeout = 5
+
+[urgency_normal]
+  foreground = "#DDDDDD"
+  background = "#404552"
+  frame_color = "000000"
   timeout = 5
 
 [urgency_critical]
+  foreground = "#DDDDDD"
+  background = "#404552"
+  frame_color = "000000"
   timeout = 0
