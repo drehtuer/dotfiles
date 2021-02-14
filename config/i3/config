@@ -109,6 +109,11 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+bindsym --release $mod+Shift+s exec scrot \
+  '/home/drehtuer/Pictures/%Y%m%d-$a.png' \
+  --select \
+  --exec 'mirage $f'
+
 # Switch keyboard layout
 bindsym $mod+Shift+Insert exec \
   --no-startup-id ~/.config/i3/switchKeyboard.sh \
