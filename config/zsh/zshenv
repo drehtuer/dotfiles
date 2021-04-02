@@ -1,5 +1,5 @@
 typeset -U PATH path
-path=("$HOME/.local/bin" "/opt/wine-devel/bin" "$path[@]")
+path=("$HOME/.local/bin" "/opt/wine-devel/bin" "/opt/clion-2020.3.2/bin" "$path[@]")
 export PATH
 
 typeset WINEPREFIX="$HOME/.wine"

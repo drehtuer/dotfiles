@@ -251,6 +251,7 @@ exec signal-desktop
 exec discord
 exec deadbeef
 exec steam
+exec rainlendar2
 exec owncloud
 
 # Window matchers

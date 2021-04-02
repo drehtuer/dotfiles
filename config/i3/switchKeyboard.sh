@@ -9,7 +9,7 @@ KBD_INTL_CONF='-layout us -variant intl'
 KBD_DE='de'
 KBD_DE_CONF='-layout de -variant nodeadkeys'
 
-KBD=('KBD_US' 'KBD_US_CONF' 'KBD_INTL' 'KBD_INTL_CONF' 'KBD_DE' 'KBD_DE_CONF')
+KBD=('KBD_INTL' 'KBD_INTL_CONF' 'KBD_US' 'KBD_US_CONF' 'KBD_DE' 'KBD_DE_CONF')
 
 function setKbd {
   setxkbmap ${!KBD[$((${1} + 1))]}
