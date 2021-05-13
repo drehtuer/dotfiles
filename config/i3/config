@@ -217,6 +217,7 @@ mode "resize" {
 # finds out, if available)
 bar {
   id bar-primary
+  mode hide
   output $monitor_primary
   status_command i3status -c ~/.config/i3status/primary
   tray_output none
@@ -225,6 +226,7 @@ bar {
 
 bar {
   id bar-secondary
+  mode hide
   output $monitor_secondary
   status_command i3status -c ~/.config/i3status/secondary
   tray_output $monitor_secondary
@@ -248,6 +250,7 @@ exec thunderbird
 exec feedreader
 exec whatsdesk
 exec signal-desktop
+exec hp-systray
 exec discord
 exec deadbeef
 exec steam
