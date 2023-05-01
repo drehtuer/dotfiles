@@ -1,0 +1,33 @@
+COLOR_PROMPT=
+# Check if terminal supports color
+case "${TERM}" in
+  xterm-color|*-256color)
+    COLOR_PROMPT=yes
+    ;;
+esac
+
+# Colors
+if [ -n "${COLOR_PROMPT}" ]; then
+  COLOR_GREEN='\[\033[01;32m\]'
+  COLOR_YELLOW='\[\033[01;33m\]'
+  COLOR_BLUE='\[\033[01;34m\]'
+  COLOR_CYAN='\[\033[01;36m\]'
+  COLOR_GRAY='\[\033[01;37m\]'
+  COLOR_MAGENTA='\[\033[01;95m\]'
+  COLOR_UNSET='\[\033[00m\]'
+else
+  COLOR_GREEN=''
+  COLOR_YELLOW=''
+  COLOR_BLUE=''
+  COLOR_CYAN=''
+  COLOR_MAGENTA=''
+  COLOR_GRAY=''
+  COLOR_MAGENTA=''
+  COLOR_UNSET=''
+fi
+
+# Primary prompt
+PS1="${COLOR_UNSET}${COLOR_GREEN}\u@\h${COLOR_UNSET}:${COLOR_BLUE}\w${COLOR_UNSET}\
+${COLOR_CYAN}\$(__bash_git_branch)${COLOR_UNSET}\
+${COLOR_MAGENTA}\$(__bash_git_stash)\$(__bash_git_changes)${COLOR_UNSET}\
+\n${COLOR_GRAY}[\t][\${?}] \$${COLOR_UNSET} "

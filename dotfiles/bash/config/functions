@@ -1,0 +1,16 @@
+# Current git branch
+function __bash_git_branch {
+  git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
+
+# Active stash
+function __bash_git_stash {
+  git stash list --no-color 2>/dev/null | sed -e 's/^stash@{\([0-9]\+\)}: \(.*\)/[\1: \2]/'
+}
+
+# Modifiled files
+function __bash_git_changes {
+  if [ -n "$(git status --short 2>/dev/null)" ]; then
+    echo "[M]"
+  fi
+}

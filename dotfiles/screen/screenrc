@@ -1,0 +1,29 @@
+# https://www.gnu.org/software/screen/manual/screen.html
+# man: https://linux.die.net/man/1/screen
+#
+# Automatically detach upon hangup
+autodetach on
+
+# Background-color-erase: Clear color from characters
+# on erase/insert/scroll/clear
+defbce on
+
+# Logging
+deflog off
+
+# Enable mouse tracking
+defmousetrack on
+
+# Scrollback
+defscrollback 1000
+
+# UTF-8 support
+defutf8 on
+
+# Log to file
+# logfile <path>
+# Timestamp for logs
+logtstamp on
+
+# Copyright notice on startup
+startup_message off

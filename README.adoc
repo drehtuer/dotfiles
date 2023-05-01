@@ -1,0 +1,16 @@
+= Drehtuer's dotfiles
+:data-uri:
+:lang: en
+:doctype: article
+:icontype: svg
+:nofooter:
+
+:url-dotdrop: https://github.com/deadc0de6/dotdrop
+
+Collection of dotfiles for personal use, using link:url-dotdrop[dotdrop^] for synchronization, encryption, and other features.
+
+link:dotdrop[Dotdrop^] was chosen because it requires only on a running python installation (and local pip installation), which should be easy enough to set up on any machine, whether it runs Windows, Linux, Android, or other operation systems.
+
+Host specific configurations are supported, settings can be tailored to different users on these machines as well.
+
+All data is kept on github, no password is needed to clone the repo

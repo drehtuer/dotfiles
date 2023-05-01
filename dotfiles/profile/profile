@@ -1,0 +1,15 @@
+# Variables
+HOME_BIN="${HOME}/.bin"
+BASHRC="${HOME}/.bashrc"
+
+# Include bash settings
+if [ -n "${BASH_VERSION}" ]; then
+  if [ -f "${BASHRC}" ]; then
+    . "${BASHRC}"
+  fi
+fi
+
+# Add local binary folder before other PATHs
+if [ -d "${HOME_BIN}" ]; then
+  PATH="${HOME_BIN}:${PATH}"
+fi

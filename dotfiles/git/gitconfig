@@ -1,0 +1,22 @@
+# https://git-scm.com/docs/git-config
+
+[alias]
+  br = branch
+  ci = commit
+  cia = commit --amend
+  co = checkout
+  cyp = cherry-pick
+  pl = pull
+  ps = push
+  st = status
+  sw = switch
+
+[core]
+  editor = vi
+
+[init]
+  defaultBranch = main
+
+[user]
+  email = drehtuer@drehtuer.de
+  name = drehtuer
