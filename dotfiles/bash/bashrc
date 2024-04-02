@@ -25,7 +25,7 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # Bash functions
-. ${HOME_BASH}/functions
+. ${HOME_BASH}/git_support
 
 # Prompt
 . ${HOME_BASH}/prompt
@@ -34,10 +34,4 @@ shopt -s checkwinsize
 . ${HOME_BASH}/aliases
 
 # Completion
-if ! shopt -oq posix; then
-	if [ -f /usr/share/bash-completion/bash_completion ]; then
-		. /usr/share/bash-completion/bash_completion
-	elif [ -f /etc/bash_completion ]; then
-		. /etc/bash_completion
-	fi
-fi
+. ${HOME_BASH}/completion

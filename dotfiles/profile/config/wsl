@@ -1,0 +1,14 @@
+# LD_LIBRARY_PATH
+WSL_LIBRARY_PATH="/usr/lib/wsl/lib"
+
+if [ -f ${WSL_LIBRARY_PATH} ]; then
+  LD_LIBRARY_PATH="${WSL_LIBRARY_PATH}:${LD_LIBRARY_PATH}"
+fi
+
+
+# PATH
+CUDA_PATH="/usr/local/cuda/bin"
+
+if [ -f ${CUDA_PATH} ]; then
+  PATH="${CUDA_PATH}:${PATH}"
+fi

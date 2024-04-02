@@ -3,81 +3,84 @@
 -- Add any additional options here
 --[[ https://neovim.io/doc/user/options.html#options ]]
 
+local opt = vim.opt
+
 -- Write if modified
-vim.opt.autowrite = false
--- Sync OS and NeoVim clipboard
-vim.opt.clipboard = "unnamedplus"
+opt.autowrite = false
+
+if not vim.env.SSH_TTY then
+  -- Sync OS and NeoVim clipboard
+  opt.clipboard = "unnamedplus"
+end
 -- Insert mode completion
-vim.opt.completeopt = "noinsert,menuone,menu,noselect"
+opt.completeopt = "noinsert,menuone,menu,noselect"
 -- Conceal level
-vim.opt.conceallevel = 0
+opt.conceallevel = 0
 -- Raise dialog on actions on unsafed changes
-vim.opt.confirm = true
+opt.confirm = true
 -- Expand tabs to spaces
-vim.opt.expandtab = true
+opt.expandtab = true
 -- Use Unix line endings by default
-vim.opt.fileformat = "unix"
+opt.fileformat = "unix"
 -- Folding support
-vim.opt.foldenable = true
+opt.foldenable = true
 -- Only manual folding
-vim.opt.foldmethod = "manual"
+opt.foldmethod = "manual"
 -- Ignore case in search pattern
-vim.opt.ignorecase = true
+opt.ignorecase = true
 -- Line break on words w/o adding EOL
-vim.opt.linebreak = true
+opt.linebreak = true
 -- Show 'invisible' characters
-vim.opt.list = false
--- Add <> to matchpairs
-vim.opt.matchpairs:append({ "<:>" })
+opt.list = true
 -- Enable mouse in all windows
-vim.opt.mouse = "ar"
+opt.mouse = "ar"
 -- Line numbers
-vim.opt.number = true
+opt.number = true
 -- Line numbers are relative
-vim.opt.relativenumber = true
+opt.relativenumber = true
 -- Number of screen lines to keep above/below cursor
-vim.opt.scrolloff = 1
+opt.scrolloff = 1
 -- Spaces used for indentation
-vim.opt.shiftwidth = 2
+opt.shiftwidth = 2
 -- No hit-enter for completion
-vim.opt.shortmess:append({ I = true, c = true })
+opt.shortmess:append({ I = true, c = true })
 -- Show arguments on completion
-vim.opt.showfulltag = true
+opt.showfulltag = true
 -- Show matching bracket
-vim.opt.showmatch = true
+opt.showmatch = true
 -- Number of columns to keep to left/right
-vim.opt.sidescrolloff = 5
+opt.sidescrolloff = 5
 -- Override ignorecase if only small letters are used in search
-vim.opt.smartcase = true
+opt.smartcase = true
 -- Smart indentation on new lines
-vim.opt.smartindent = true
+opt.smartindent = true
 -- Smart tabs
-vim.opt.smarttab = true
+opt.smarttab = true
 -- Spell checking
-vim.opt.spell = false
+opt.spell = false
 -- Spell language is english by default, german as backup
-vim.opt.spelllang = { "en_us", "de_de" }
+opt.spelllang = { "en_us", "de_de" }
 -- When splitting horizontally, new window will be below
-vim.opt.splitbelow = true
+opt.splitbelow = true
 -- When splitting vertically, new windows will be right
-vim.opt.splitright = true
+opt.splitright = true
 -- Switching between buffer
-vim.opt.switchbuf = { "useopen", "uselast" }
--- vim.opt.window title
-vim.opt.title = true
+opt.switchbuf = { "useopen", "uselast" }
+-- opt.window title
+opt.title = true
 -- No swapfiles
-vim.opt.swapfile = false
+opt.swapfile = false
 -- Syntax highlighting based on filetype
-vim.opt.syntax = "on"
+opt.syntax = "on"
 -- Tab size
-vim.opt.tabstop = 2
+opt.tabstop = 2
 -- Enable terminal colors
-vim.opt.termguicolors = true
+opt.termguicolors = true
 -- Timeout for key sequences
-vim.opt.timeout = true
+opt.timeout = true
 -- Timeout in ms
-vim.opt.timeoutlen = 300
+opt.timeoutlen = 300
 -- Undo file
-vim.opt.undofile = false
+opt.undofile = false
 -- No backup file
-vim.opt.writebackup = false
+opt.writebackup = false

@@ -13,9 +13,6 @@ dotfiles:
   f_bash_config:
     src: bash/config
     dst: ~/.config/bash
-  f_dotdrop:
-    src: ../dotdrop.sh
-    dst: ~/.bin/dotdrop.sh
   f_gitconfig:
     src: git/gitconfig
     dst: ~/.gitconfig
@@ -25,6 +22,9 @@ dotfiles:
   f_profile:
     src: profile/profile
     dst: ~/.profile
+  f_profile_config:
+    src: profile/config
+    dst: ~/.config/profile
   f_screen:
     src: screen/screenrc
     dst: ~/.screenrc
@@ -37,8 +37,8 @@ dotfiles:
 profiles:
   linux:
     dotfiles:
-    - f_dotdrop
     - f_profile
+    - f_profile_config
     - f_bash
     - f_bash_config
     - f_gitconfig
@@ -46,3 +46,7 @@ profiles:
     - f_tmux
     - f_screen
     - f_wezterm
+  windows:
+    dotfiles:
+    - f_gitconfig
+    - f_nvim

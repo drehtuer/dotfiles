@@ -8,11 +8,17 @@
   cyp = cherry-pick
   pl = pull
   ps = push
+  psf = push --force
+  sh = stash
+  shp = stash pop
   st = status
   sw = switch
+  sc = switch --create
+  sd = switch --detach
+  ta = tag --annotate
 
 [core]
-  editor = vi
+  editor = nvim
 
 [init]
   defaultBranch = main
