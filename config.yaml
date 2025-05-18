@@ -5,6 +5,14 @@ config:
   check_version: false
   create: true
   dotpath: files
+  instignore:
+    - "*lazy-lock.json"
+  impignore:
+    - "*/lazy-lock.json"
+  upignore:
+    - "*/lazy-lock.json"
+  cmpignore:
+    - "*/lazy-lock.json"
 dotfiles:
   f_bash:
     src: bash/bashrc
@@ -18,10 +26,6 @@ dotfiles:
   f_nvim:
     src: nvim
     dst: ~/.config/nvim
-    upignore:
-      - "~/.config/nvim/lazy-lock.json"
-    cmpignore:
-      - "~/.config/nvim/lazy-lock.json"
   f_profile:
     src: profile/profile
     dst: ~/.profile
