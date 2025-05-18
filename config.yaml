@@ -19,9 +19,9 @@ dotfiles:
     src: nvim
     dst: ~/.config/nvim
     upignore:
-      - ~/.config/nvim/lazy-lock.json
+      - "~/.config/nvim/lazy-lock.json"
     cmpignore:
-      - ~/.config/nvim/lazy-lock.json
+      - "~/.config/nvim/lazy-lock.json"
   f_profile:
     src: profile/profile
     dst: ~/.profile
