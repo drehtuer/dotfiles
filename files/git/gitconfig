@@ -17,9 +17,6 @@
   sd = switch --detach
   ta = tag --annotate
 
-[core]
-  editor = nvim
-
 [init]
   defaultBranch = main
 

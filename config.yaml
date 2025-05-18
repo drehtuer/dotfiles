@@ -1,9 +1,10 @@
+# https://dotdrop.readthedocs.io/en/latest/config/config-config/
 config:
   backup: true
   banner: false
   check_version: false
   create: true
-  dotpath: dotfiles
+  dotpath: files
 dotfiles:
   f_bash:
     src: bash/bashrc
@@ -17,6 +18,10 @@ dotfiles:
   f_nvim:
     src: nvim
     dst: ~/.config/nvim
+    upignore:
+      - ~/.config/nvim/lazy-lock.json
+    cmpignore:
+      - ~/.config/nvim/lazy-lock.json
   f_profile:
     src: profile/profile
     dst: ~/.profile
@@ -38,19 +43,19 @@ dotfiles:
 profiles:
   linux:
     dotfiles:
-    - f_profile
-    - f_profile_config
-    - f_bash
-    - f_bash_config
-    - f_gitconfig
-    - f_nvim
-    - f_tmux
-    - f_screen
-    - f_wezterm
+      - f_profile
+      - f_profile_config
+      - f_bash
+      - f_bash_config
+      - f_gitconfig
+      - f_nvim
+      - f_tmux
+      - f_screen
+      - f_wezterm
   windows:
     dotfiles:
-    - f_gitconfig
-    - f_nvim
+      - f_gitconfig
+      - f_nvim
   Azathoth:
     dotfiles:
-    - d_completion.d
+      - d_completion.d
