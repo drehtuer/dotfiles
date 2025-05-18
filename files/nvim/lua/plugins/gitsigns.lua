@@ -1,4 +1,4 @@
 return {
-  "stevearc/dressing.nvim",
+  "lewis6991/gitsigns.nvim",
   enabled = true,
 }

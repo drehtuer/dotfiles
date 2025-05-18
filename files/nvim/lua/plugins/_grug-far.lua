@@ -1,4 +1,4 @@
 return {
-  "folke/neodev.nvim",
+  "MagicDuck/grug-far.nvim",
   enabled = false,
 }

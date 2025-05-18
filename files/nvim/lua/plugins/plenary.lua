@@ -1,4 +1,4 @@
 return {
-  "akinsho/bufferline.nvim",
+  "nvim-lua/plenary.nvim",
   enabled = true,
 }

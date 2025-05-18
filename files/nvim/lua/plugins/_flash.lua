@@ -1,4 +1,4 @@
 return {
-  "williamboman/mason.nvim",
+  "folke/flash.nvim",
   enabled = false,
 }

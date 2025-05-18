@@ -1,4 +1,4 @@
 return {
-  "rcarriga/nvim-notify",
+  "folke/ts-comments.nvim",
   enabled = true,
 }

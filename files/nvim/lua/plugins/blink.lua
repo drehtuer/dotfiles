@@ -1,4 +1,4 @@
 return {
-  "akinsho/bufferline.nvim",
+  "saghen/blink.cmp",
   enabled = true,
 }

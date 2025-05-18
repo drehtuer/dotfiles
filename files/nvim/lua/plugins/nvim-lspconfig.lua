@@ -1,4 +1,4 @@
 return {
-  "akinsho/bufferline.nvim",
+  "neovim/nvim-lspconfig",
   enabled = true,
 }

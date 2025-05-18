@@ -1,4 +1,4 @@
 return {
-  "folke/neoconf.nvim",
+  "mason.nvim",
   enabled = false,
 }

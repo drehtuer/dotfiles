@@ -1,4 +1,4 @@
 return {
-  "MunifTanjim/nui.nvim",
+  "folke/trouble.nvim",
   enabled = true,
 }

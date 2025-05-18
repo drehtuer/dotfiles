@@ -1,4 +1,4 @@
 return {
-  "nvimdev/dashboard-nvim",
+  "windwp/nvim-ts-autotag",
   enabled = false,
 }

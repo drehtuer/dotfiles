@@ -1,4 +1,4 @@
 return {
-  "akinsho/bufferline.nvim",
+  "folke/lazydev.nvim",
   enabled = true,
 }

@@ -4,6 +4,7 @@
 --[[ https://neovim.io/doc/user/options.html#options ]]
 
 local opt = vim.opt
+local cmd = vim.cmd
 
 -- Write if modified
 opt.autowrite = false
@@ -39,7 +40,7 @@ opt.number = true
 -- Line numbers are relative
 opt.relativenumber = true
 -- Number of screen lines to keep above/below cursor
-opt.scrolloff = 1
+opt.scrolloff = 0
 -- Spaces used for indentation
 opt.shiftwidth = 2
 -- No hit-enter for completion
